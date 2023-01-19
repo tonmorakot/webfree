@@ -13,10 +13,25 @@
   $s_amphoe = $_POST["s_amphoe"];
   $s_tumbon = $_POST["s_tumbon"];
   $s_post = $_POST["s_post"];
-
   $s_day = $_POST["s_day"];
   $s_month = $_POST["s_month"];
   $s_year = $_POST["s_year"];
+
+  include("../connection/connect.php");
+
+  $sql = "insert into students (s_id, s_name, s_lastname, s_email, s_tel, s_line, s_address, s_moo, s_road, s_province, s_amphoe, s_tumbon, s_post, s_day, s_month, s_year) values ('$s_id', '$s_name', '$s_lastname', '$s_email', '$s_tel', '$s_line', '$s_address', '$s_moo', '$s_road', '$s_province', '$s_amphoe', '$s_tumbon', '$s_post', '$s_day', '$s_month', '$s_year')";
+  
+  if($connect->query($sql) === TRUE){
+    echo "บันทึกข้อมูลเรียบร้อยแล้ว";
+  } else {
+    echo $connect->error;
+  }
+  
+
+
+
+
+  /*
 
   $age = 2566 - $s_year;
 
@@ -54,5 +69,7 @@
   echo "<br>";
   echo $s_year;
   echo "<br>";
+
+  */
 
 ?>
