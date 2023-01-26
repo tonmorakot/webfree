@@ -22,7 +22,8 @@
   $sql = "insert into students (s_id, s_name, s_lastname, s_email, s_tel, s_line, s_address, s_moo, s_road, s_province, s_amphoe, s_tumbon, s_post, s_day, s_month, s_year) values ('$s_id', '$s_name', '$s_lastname', '$s_email', '$s_tel', '$s_line', '$s_address', '$s_moo', '$s_road', '$s_province', '$s_amphoe', '$s_tumbon', '$s_post', '$s_day', '$s_month', '$s_year')";
   
   if($connect->query($sql) === TRUE){
-    echo "บันทึกข้อมูลเรียบร้อยแล้ว";
+    header("Location: ../list.php");
+    // echo "บันทึกข้อมูลเรียบร้อยแล้ว";
   } else {
     echo $connect->error;
   }
