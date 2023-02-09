@@ -14,9 +14,12 @@
         <thead>
           <tr>
             <th>ลำดับ</th>
+            <th>รหัสนักศึกษา</th>
             <th>ชื่อ-นามสกุล</th>
             <th>ที่อยู่</th>
+            <th>อีเมล</th>
             <th>เบอร์โทร</th>
+            <th>วันเกิด</th>
             <th>จัดการ</th>
           </tr>
         </thead>
@@ -30,10 +33,13 @@
             <?php while($row = $result->fetch_assoc()) { ?>
               <tr>
                 <td><?=$row["id"]?></td>
+                <td><?=$row["s_id"]?></td>
                 <td><?=$row["s_name"]." ".$row["s_lastname"] ?></td>
                 <td><?=$row["s_province"] ?></td>
+                <td><?=$row["s_email"] ?></td>
                 <td><?=$row["s_tel"] ?></td>
-                <td><span class="p-3"><a href="#" class="btn btn-warning">แก้ไข</a></span><a href="controls/delete-student.php?id=<?=$row["id"]?>" class="btn btn-danger" onclick="return confirm('Are you sure?');">ลบ</a></td>
+                <td><?=$row["s_day"] ?> <?=$row["s_month"] ?> <?=$row["s_year"] ?></td>
+                <td><span class="p-3"><a href="edit.php?id=<?=$row["id"]?>" class="btn btn-warning">แก้ไข</a></span><a href="controls/delete-student.php?id=<?=$row["id"]?>" class="btn btn-danger" onclick="return confirm('Are you sure?');">ลบ</a></td>
               </tr>
             <?php } ?>
           <?php } ?>
