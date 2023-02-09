@@ -1,15 +1,15 @@
 <?php
 
-  $id = $_GET["id"];
+$id = $_GET["id"];
 
-  include("../connection/connect.php");
+include("../connection/connect.php");
 
-  $sql = "delete from students where id=$id";
+$sql = "delete from student where id=$id";
 
-  if($connect->query($sql) === TRUE){
-    header("Location: ../list.php");
-  } else {
+if ($connect->query($sql) === TRUE) {
+    header("location: ../list.php");
+} else {
     echo $connect->error;
-  }
+}
 
 ?>

@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang="en">
 
-  <?php include("./components/head.php"); ?>
+<?php include("./components/head.php"); ?>
 
-  <body>
+<body>
 
-    <?php include("./components/nav.php"); ?>
+  <?php include("./components/nav.php"); ?>
 
-    <div class="container-fluid mt-3">
-      <h1>ติดต่อเรา</h1>  
-    </div>
+  <div class="container-fluid mt-3">
+    <h1>ติดต่อเรา</h1>
+  </div>
 
-    <?php include("./components/script.php"); ?>
+  <?php include("./components/script.php"); ?>
 
-  </body>
+</body>
+
 </html>
